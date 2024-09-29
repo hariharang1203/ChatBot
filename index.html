@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBotLogin</title>
+    <link rel="icon" type="image" href="logo.avif"  >
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+        *{
+            margin: 0%;
+            padding: 0%;
+            font-family: "Poppins", sans-serif;
+        }
+        body{
+            background: linear-gradient(195deg, #ff00c3, #d123ba, #a42dab, #7b2f97, #552b80, #342465, #181a48, #050b2b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container{
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            height: 500px;
+            width: 400px;
+            display:flex ;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            color: white;
+            gap: 10px;
+        }
+        .login-img{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        p{
+            font-size: 20px;
+        }
+        h1{
+            font-size: 35px;
+            font-weight:900;
+        }
+        small{
+            font-size: 18px;
+        }
+        .pass{
+            width: 300px;
+            height: 40px;
+            outline: none;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 0px 10px;
+            color: white;
+        }
+        .allow-btn{
+            width: 80px;
+            height: 40px;
+            font-size: 20px;
+            font-weight:500 ;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            background: radial-gradient(circle at -10% 100%, #b70c00, #c10020, #c6003a, #c50055, #bd0073, #aa0093, #8c00b2, #5900cd); /
+        }
+       .pass::placeholder{
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="Bot.gif" alt="Bot-Image" class="login-img">
+        <p class="login-para">Private API KEY Used</p>
+        <h1 class="login-h1">Authorized Person</h1>
+        <small class="login-small">Only Allowed</small>
+        <input type="password" class="pass" placeholder="Enter KEY">
+        <button class="allow-btn">Allow</button>
+    </div>
+    <script>
+        let password = document.querySelector('.pass');
+        let allow_btn = document.querySelector('.allow-btn');
+        
+        allow_btn.addEventListener('click', password_check);
+        
+        function allow() {
+            window.location.href = "/main.html"; 
+        }
+        
+        function password_check() {
+            let pass_value = password.value; 
+            if (pass_value === "Hari1212") {
+                allow();
+            } else {
+                alert("Incorrect password");
+            }
+        }
+        
+       
+    </script>
+</body>
+</html>

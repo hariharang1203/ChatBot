@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+
+    <!-- logo for website -->
+    <link rel="icon" type="image" href="logo.avif">
+
+    <!-- link google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <!-- linking css page -->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="mobile-header">
+        <h1 class="mobile-title">ChatBot</h1>
+    </div>
+    <div class="chatbot-container">
+        <!-- User page -->
+        <div class="user-side">
+            <h1 style="color:white; text-align:center;">ChatBot</h1>
+            <div class="user-icon">
+                <img src="background.gif" alt="Bot-image" class="bot-img">
+            </div>
+            <div class="user-name">
+                <small>Hi,Boss !</small>
+                <p>Waiting for your command..!</p>
+            </div>
+        </div>
+
+        <!-- Response Page -->
+        <div class="response-side">
+
+            <!-- user question -->
+            <div class="incoming-wrapper">
+                <div class="incoming-msg">
+                    <p>Hi!</p>
+                    <img src="user-bot.jpg">
+                </div>
+            </div>
+            <!-- response answer -->
+            <div class="outgoing-wrapper">
+                <div class="outgoing-msg">
+                    <img src="chat-bot.webp">
+                    <p>Hi!, ask me anything I am here to assist you.</p>
+                    <span class="material-symbols-outlined copy">
+                        content_copy
+                    </span>
+                </div>
+            </div>
+
+
+
+
+            <!-- Typing Area -->
+            <div class="typing-area">
+                <div class="text-box">
+                    <textarea placeholder="Enter the prompt" id="input"></textarea>
+                    <span class="material-symbols-outlined" id="send-btn">send</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- linking javascript page -->
+    <script src="main.js"></script>
+    
+</body>
+
+</html>
